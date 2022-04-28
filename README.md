@@ -15,6 +15,6 @@ where
 The structure corresponding to an instance contains five fields: 
 * .Network is a nxm Matrix which represents the incidence matrix of the graph
 * .Capacity is a m-dimensional vector consisting of the edge capacities
-* .SourceSink is a 1x2xn Matrix where the matrix SourceSink(:,:,i) yields the \[source,sink\] pair
+* .SourceSink is a 1x2xn Matrix where the matrix SourceSink(:,:,i) yields the \[source,sink\] pair for player i
 * .C1 is a mxmxn Matrix where C1(:,:,i) is the C1 cost matrix of player i (cf. paper)
 * .C2 is a mxn Matrix where C2(:,i) is the C2 cost vector of player i (cf. paper; note that in the case of a congestion game, i.e. b = 1, C1(:,:,i) = diag(C2(:,i)) and C^{cong} = C1(:,:,i) = diag(C2(:,i)))
