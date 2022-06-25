@@ -16,6 +16,6 @@ The structure corresponding to an instance contains the following fields:
 * .Network is a (sparse) nxm Matrix which represents the incidence matrix of the graph, that is, (v,e) = 1 if the edge e exits vertex v, (v,e) = -1 if it enters v and (v,e) = 0 otherwise (the latter cases, i.e. zero-entries, are not specifically listed in a sparse matrix).  
 * .Capacity is a m-dimensional vector consisting of the edge capacities.
 * .SourceSink is a 1x2xn Matrix where the matrix SourceSink(:,:,i) yields the \[source,sink\] pair for player i.
-* .C1 is a mxmxn Matrix where C1(:,:,i) is the C1 cost matrix of player i (cf. paper).
+* .C1 is a mxmxn Matrix where C1(:,:,i) is the transposed C1 cost matrix of player i (cf. paper).
 * .C2 is a mxn Matrix where C2(:,i) is the C2 cost vector of player i (cf. paper; note that in the case of a congestion game, i.e. b = 1, C1(:,:,i) = diag(C2(:,i)) holds in the matlab file which yields the described "congestion game" cost function in the paper for C^{cong} = C1(:,:,i) = diag(C2(:,i))).
 * .GNEi for i = 1,...,7 which represents the GNE x=(x_1,...,x_n)=GNEi found by the i-th method in Table 1 of the paper (if the field does not exist, no equilibrium was found). For i=7 (Baron), GNE7=(x,nu) also contains the dual variables corresponding to x.
