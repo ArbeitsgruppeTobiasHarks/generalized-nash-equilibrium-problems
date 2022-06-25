@@ -18,4 +18,5 @@ The structure corresponding to an instance contains the following fields:
 * .SourceSink is a 1x2xn Matrix where the matrix SourceSink(:,:,i) yields the \[source,sink\] pair for player i.
 * .C1 is a mxmxn Matrix where C1(:,:,i) is the transposed C1 cost matrix of player i (cf. paper).
 * .C2 is a mxn Matrix where C2(:,i) is the C2 cost vector of player i (cf. paper; note that in the case of a congestion game, i.e. b = 1, C1(:,:,i) = diag(C2(:,i)) holds in the matlab file which yields the described "congestion game" cost function in the paper for C^{cong} = C1(:,:,i) = diag(C2(:,i))).
+* .weights is a n-dimensional vector where the i-th entry represents the weight of player i.
 * .GNEi for i = 1,...,7 which represents the GNE x=(x_1,...,x_n)=GNEi found by the i-th method in Table 1 of the paper (if the field does not exist, no equilibrium was found). For i=7 (Baron), GNE7=(x,nu) also contains the dual variables corresponding to x.
